@@ -1,0 +1,8 @@
+#!/bin/bash
+git fetch origin release
+git rebase release
+git checkout --ours .
+git rebase --continue
+COUNT=$(git rev-list --count HEAD ^release)
+echo $COUNT
+git rebase -i HEAD~$COUNT
