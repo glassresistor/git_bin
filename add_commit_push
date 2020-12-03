@@ -1,0 +1,5 @@
+git add -N .
+git add -p
+git commit
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git push origin $BRANCH
