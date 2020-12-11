@@ -43,7 +43,7 @@ new_feature new_feature_name
 Adds new files and runs add -p to review changes.  Adds a commit and requests a comment then pushes up branch
 
 ```
-new_feature new_feature_name
+add_commit_push
 ```
 
 
