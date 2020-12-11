@@ -35,7 +35,7 @@ new_feature new_feature_name
 This updates from release then creates a new branch using the first arguement for the branch name following hotfix/
 
 ```
-new_feature new_feature_name
+new_hotfix new_feature_name
 ```
 
 
