@@ -56,7 +56,7 @@ This command does not push the branch so you have time to review incase it dropp
 prep_for_review
 git diff release
 git status
-git push origin <branch_name>
+git push origin <branch_name> -f
 ```
 
 ## Prune Local Branches
