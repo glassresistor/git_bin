@@ -1,4 +1,3 @@
-Just add this to your Bash rc file
 
 # Installation instructions
 
