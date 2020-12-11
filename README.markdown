@@ -9,7 +9,7 @@ Add this to your bashrc/profile/zrc files
 export PATH=$PATH:~/git_bin
 ```
 
-If you want Git to use a differnt editor than VIM you can use this command to set it to the editor of your choice
+If you want Git to use a different editor than VIM you can use this command to set it to the editor of your choice
 
 ```
 git config --global core.editor "nano"
