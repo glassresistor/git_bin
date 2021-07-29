@@ -1,8 +1,16 @@
 #!/bin/bash
-git fetch origin release
-git rebase release
-git checkout --ours .
-git rebase --continue
-COUNT=$(git rev-list --count HEAD ^release)
-echo $COUNT
-git rebase -i HEAD~$COUNT
+if [[ -z $(git status -s) ]]
+then
+  git push origin $BRANCH
+  git fetch origin release
+  git rebase release
+  git checkout --ours .
+  git rebase --continue
+  COUNT=$(git rev-list --count HEAD ^release)
+  echo $COUNT
+  git rebase -i HEAD~$COUNT  echo "tree is clean"
+else
+  echo "uncommited changes, please commit changes before running this"
+  exit
+fi
+
