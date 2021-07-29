@@ -1,4 +1,3 @@
-Just add this to your Bash rc file
 
 # Installation instructions
 
@@ -8,6 +7,12 @@ git clone git@github.com:pivotbio/git_bin.git
 
 Add this to your bashrc/profile/zrc files
 export PATH=$PATH:~/git_bin
+```
+
+If you want Git to use a different editor than VIM you can use this command to set it to the editor of your choice
+
+```
+git config --global core.editor "nano"
 ```
 
 # Usage
@@ -30,7 +35,7 @@ new_feature new_feature_name
 This updates from release then creates a new branch using the first arguement for the branch name following hotfix/
 
 ```
-new_feature new_feature_name
+new_hotfix new_feature_name
 ```
 
 
@@ -38,7 +43,7 @@ new_feature new_feature_name
 Adds new files and runs add -p to review changes.  Adds a commit and requests a comment then pushes up branch
 
 ```
-new_feature new_feature_name
+add_commit_push
 ```
 
 
@@ -51,7 +56,7 @@ This command does not push the branch so you have time to review incase it dropp
 prep_for_review
 git diff release
 git status
-git push origin <branch_name>
+git push origin <branch_name> -f
 ```
 
 ## Prune Local Branches
