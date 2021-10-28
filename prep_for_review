@@ -2,11 +2,11 @@
 if [[ -z $(git status -s) ]]
 then
   git push origin $BRANCH
-  git fetch origin release
-  git rebase release
+  git fetch origin $RELEASE_BRANCH_NAME
+  git rebase $RELEASE_BRANCH_NAME
   git checkout --ours .
   git rebase --continue
-  COUNT=$(git rev-list --count HEAD ^release)
+  COUNT=$(git rev-list --count HEAD ^$RELEASE_BRANCH_NAME)
   echo $COUNT
   git rebase -i HEAD~$COUNT  echo "tree is clean"
 else
