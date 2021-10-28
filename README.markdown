@@ -48,7 +48,7 @@ add_commit_push
 ```
 
 
-## Prep for Review
+## Prep for Review(this can break things dont use yet)
 Most complex command this updates from $RELEASE_BRANCH_NAME then reorders the changes so this branches are the most recent then allow the user the ability to squash and ammend the commit message for all commits on that branch.
 
 This command does not push the branch so you have time to review incase it dropped important changes.
