@@ -1,0 +1,4 @@
+git fetch --all
+git reset $(git merge-base $RELEASE_BRANCH_NAME $(git branch --show-current))
+git commit
+echo 'run git push origin -f' if these changes look correct
